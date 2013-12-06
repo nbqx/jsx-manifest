@@ -6,11 +6,27 @@
   "bin": {
     "jsx_manifest": "index.js"
   },
+  "scripts": {
+    "test": "tape test/test.js"
+  },
   "author": "nbqx",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nbqx/jsx-manifest.git"
+  },
+  "homepage": "https://github.com/nbqx/jsx-manifest",
+  "keywords": [
+    "adobe",
+    "extendscript",
+    "concatenate"
+  ],
   "license": "MIT",
   "dependencies": {
     "minimist": "0.0.5",
     "colors": "~0.6.2",
     "through": "~2.3.4"
+  },
+  "devDependencies": {
+    "tape": "~2.3.0"
   }
 }
