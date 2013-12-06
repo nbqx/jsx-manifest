@@ -1,0 +1,7 @@
+{
+  "b": "var _b = \"THIS IS B\"",
+  "c": {
+    "name": "test name",
+    "path": "test path"
+  }
+}
