@@ -1,6 +1,6 @@
 ## JSX(Adobe ExtendScript) Manifest
 
-JS(Adobe ExtendScript) pre-processor
+JSX(Adobe ExtendScript) pre-processor
 
 ## Install
 
