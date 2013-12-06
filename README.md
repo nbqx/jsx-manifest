@@ -1,4 +1,4 @@
-## JS(Adobe ExtendScript) Manifest
+## JSX(Adobe ExtendScript) Manifest
 
 JS(Adobe ExtendScript) pre-processor
 
