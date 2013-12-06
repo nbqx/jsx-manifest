@@ -62,6 +62,6 @@ jsx_manifest('/path/to/manifest.js', locals).on('build',function(data){
 
 ## Example
 
-    $ node index.js examples/manifest.js -b examples/data.json -o build.jsx
-    $ node index.js examples/manifest2.js -b examples/data.json -o build.jsx
+    $ jsx_manifest examples/manifest.js -b examples/data.json -o build.jsx
+    $ jsx_manifest examples/manifest2.js -b examples/data.json -o build.jsx
 
