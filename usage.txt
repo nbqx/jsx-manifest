@@ -2,7 +2,7 @@ usage: jsx_manifest {OPTIONS} FILE -o OUTFILE
 
   concat extendscript files(*.jsx) with mainifest.[js|jsx]
 
-  FILES is "manifest.js" or "manifest.jsx".
+  FILE is "manifest.js" or "manifest.jsx".
 
   OPTIONS:
 

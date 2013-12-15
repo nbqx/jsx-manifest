@@ -62,6 +62,11 @@ jsx_manifest('/path/to/manifest.js', locals).on('build',function(data){
 
 ## Example
 
+    $ jsx_manifest examples/manifest.js -b examples/data.json # => output to console
+    $ jsx_manifest examples/manifest2.js -b examples/data.json # => output to console
+
+or
+
     $ jsx_manifest examples/manifest.js -b examples/data.json -o build.jsx
     $ jsx_manifest examples/manifest2.js -b examples/data.json -o build.jsx
 

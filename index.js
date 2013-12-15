@@ -6,8 +6,7 @@ var fs = require('fs'),
     argv = require('minimist')(process.argv.slice(2),{});
 
 var pwd = process.env['PWD'];
-var buildjsx = argv.o || argv.out || pwd+'/build.jsx';
-var buildjsx_path = path.resolve(buildjsx);
+var buildjsx = argv.o || argv.out;
 var manifest_file = (argv._.length!=0)? argv._[0] : (fs.existsSync(pwd+'/manifest.jsx'))? pwd+'/manifest.jsx' : pwd+'/manifest.js';
 var manifest_file_path = path.resolve(manifest_file);
 
@@ -39,14 +38,19 @@ fs.exists(manifest_file_path, function(exist){
   }
 
   jsx_manifest(manifest_file_path, locals).on('build',function(data){
-    fs.writeFile(buildjsx_path, data, function(err){
-      if(err){
-        console.log(('[Error]: '+err).red);
-        process.exit(1);
-      }
-      console.log(('[Done]: '+buildjsx_path+' created.').green);
-      process.exit();
-    });
+    if(buildjsx!==undefined){
+      var buildjsx_path = path.resolve(buildjsx);
+      fs.writeFile(buildjsx_path, data, function(err){
+        if(err){
+          console.log(('[Error]: '+err).red);
+          process.exit(1);
+        }
+        console.log(('[Done]: '+buildjsx_path+' created.').green);
+        process.exit();
+      });
+    }else{
+      process.stdout.write(data+"\n");
+    }
   });
   
 });
